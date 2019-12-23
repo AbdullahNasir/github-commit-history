@@ -7,6 +7,8 @@ import { BranchSelectorComponent } from './branch-selector/branch-selector.compo
 import { CommitsListComponent } from './commits-list/commits-list.component';
 import { CommitGroupComponent } from './commit-group/commit-group.component';
 import { CommitComponent } from './commit/commit.component';
+import { HttpClientModule } from '@angular/common/http';
+import { GithubApiServiceService } from './github-api-service.service';
 
 
 @NgModule({
@@ -18,9 +20,10 @@ import { CommitComponent } from './commit/commit.component';
     CommitComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [GithubApiServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
