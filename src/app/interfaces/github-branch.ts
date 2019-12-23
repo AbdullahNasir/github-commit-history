@@ -2,7 +2,7 @@ export interface GithubBranch {
     name: string;
     commit: {
         sha: string;
-        url: string
+        url: string;
     };
     protected: boolean;
 }
