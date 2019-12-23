@@ -1,6 +1,6 @@
 <app-loader *ngIf="isLoading"></app-loader>
 
-<div class="row" *ngIf="!isLoading">
+<div class="row pl-2" *ngIf="!isLoading">
   branch: &nbsp;
   <select (change)="onBranchChange($event.target.value)">
     <option [selected]="i === 0" *ngFor="let branch of branches; let i = index">
