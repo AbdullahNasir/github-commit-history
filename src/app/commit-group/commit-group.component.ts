@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { GithubCommit } from '../interfaces/github-commit';
 
 @Component({
   selector: 'app-commit-group',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./commit-group.component.css']
 })
 export class CommitGroupComponent implements OnInit {
+
+  @Input() date: string;
+  @Input() commits: GithubCommit[];
 
   constructor() { }
 

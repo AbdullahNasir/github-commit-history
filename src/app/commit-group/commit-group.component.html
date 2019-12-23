@@ -1,3 +1,8 @@
-<p>
-  commit-group works!
-</p>
+<div>
+  <div class="row group-date">
+    commits on {{this.date}}
+  </div>
+  <div *ngFor="let commit of commits">
+    <app-commit [commit]="commit"></app-commit>
+  </div>
+</div>
