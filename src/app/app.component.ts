@@ -8,4 +8,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   repositoryUrl = 'https://api.github.com/repos/abdullahnasir/ionRangeSlider-Angular-Directive';
+
+  onBranchChange(branchName: string) {
+    console.log(branchName);
+  }
+
 }

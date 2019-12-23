@@ -21,7 +21,7 @@ import { GithubApiServiceService } from './github-api-service.service';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [GithubApiServiceService],
   bootstrap: [AppComponent]
