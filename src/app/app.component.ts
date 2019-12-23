@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Git Commit History';
-  repositoryUrl = 'https://api.github.com/repos/abdullahnasir/ionRangeSlider-Angular-Directive';
+  repositoryUrl = 'https://api.github.com/repos/abdullahnasir/github-commit-history';
   branchName: string;
 
   onBranchChange(branchName: string) {

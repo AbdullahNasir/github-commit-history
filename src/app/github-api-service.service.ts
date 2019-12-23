@@ -20,7 +20,7 @@ export class GithubApiServiceService {
           return {
             sha: commit['sha'],
             commit: {
-              author: commit['commit']['author'],
+              author: { ...commit['commit']['author'], imgUrl: commit['author']['avatar_url'] },
               message: commit['commit']['message']
             },
             url: this.createGithubCommitUrl(respositoryUrl, commit['sha']),
