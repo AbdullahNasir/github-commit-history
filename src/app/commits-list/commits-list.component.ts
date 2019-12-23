@@ -2,6 +2,7 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/cor
 import { GithubCommit } from '../interfaces/github-commit';
 import { GithubApiServiceService } from '../github-api-service.service';
 import * as _ from 'lodash';
+import * as moment from 'moment';
 import { GithubCommitsGrouped } from '../interfaces/github-commit-grouped';
 
 @Component({
@@ -32,7 +33,7 @@ export class CommitsListComponent implements OnInit, OnChanges {
   async fetchCommits() {
     this.isLoading = true;
     const commits: GithubCommit[] = await this.githubApi.fetchCommits(this.repositoryUrl, this.branch);
-    this.groupedCommits = _.groupBy(commits, commit => commit.date.split('T')[0]);
+    this.groupedCommits = _.groupBy(commits, commit => moment(commit.date).format('YYYY-DD-MM'));
     this.isLoading = false;
   }
 
