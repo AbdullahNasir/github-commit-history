@@ -16,6 +16,7 @@ export class CommitsListComponent implements OnInit, OnChanges {
   @Input() repositoryUrl: string;
   @Input() branch: string;
   groupedCommits: GithubCommitsGrouped = {};
+  isLoading = false;
 
   constructor(private githubApi: GithubApiServiceService) { }
 
@@ -29,8 +30,10 @@ export class CommitsListComponent implements OnInit, OnChanges {
   }
 
   async fetchCommits() {
+    this.isLoading = true;
     const commits: GithubCommit[] = await this.githubApi.fetchCommits(this.repositoryUrl, this.branch);
     this.groupedCommits = _.groupBy(commits, commit => commit.date.split('T')[0]);
+    this.isLoading = false;
   }
 
 

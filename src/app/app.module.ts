@@ -9,6 +9,7 @@ import { CommitGroupComponent } from './commit-group/commit-group.component';
 import { CommitComponent } from './commit/commit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GithubApiServiceService } from './github-api-service.service';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { GithubApiServiceService } from './github-api-service.service';
     BranchSelectorComponent,
     CommitsListComponent,
     CommitGroupComponent,
-    CommitComponent
+    CommitComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,
