@@ -1,3 +1,7 @@
-<p>
-  branch-selector works!
-</p>
+<div>
+  <select>
+    <option *ngFor="let branch of branches">
+      {{branch.name}}
+    </option>
+  </select>
+</div>
