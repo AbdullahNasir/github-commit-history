@@ -1,4 +1,5 @@
-<div>
+<div class="row">
+  branch: &nbsp;
   <select (change)="onBranchChange($event.target.value)">
     <option [selected]="i === 0" *ngFor="let branch of branches; let i = index">
       {{branch.name}}

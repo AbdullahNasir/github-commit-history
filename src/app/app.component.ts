@@ -6,11 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Git Commit History';
   repositoryUrl = 'https://api.github.com/repos/abdullahnasir/ionRangeSlider-Angular-Directive';
+  branchName: string;
 
   onBranchChange(branchName: string) {
-    console.log(branchName);
+    this.branchName = branchName;
   }
 
 }
